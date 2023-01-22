@@ -5,8 +5,6 @@ var mysql = require('mysql2');
 const connection = require('express-myconnection');
 dotenv.config();
 
-// test
-
 const app = express();
 const port = process.env.PORT;
 
@@ -126,7 +124,7 @@ app.get('/api/device/get_status', function(req, res){
 
 app.get('/test', function(req, res){
     const { test } = req.query;
-
+    console.log("Connection is OK")
     res.send(test)
 })
   
